@@ -1,0 +1,78 @@
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: bold;
+}
+h3 {
+  color: hsl(26, 100%, 55%);
+  font-weight: bold;
+  font-size: 13px;
+}
+h4 {
+
+}
+p {
+  color: hsl(220, 14%, 75%);
+}
+button {
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 10px;
+  border: none;
+}
+.mainFrame {
+  margin-left: 14%;
+  margin-right: 14%;
+}
+.avatar {
+  width: 50px;
+  margin-left: 50px;
+}
+.nav-item {
+  margin-left: 15px;
+}
+
+.mgtp{
+  margin-top: 80px;
+}
+.mgsd{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.productImage {
+  width: 400px;
+  border-radius: 15px;
+}
+.thumbnail {
+  width: 80px;
+  border-radius: 15px;
+}
+.col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.purchaseButton {
+  color: white;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: blue;
+  color: hsl(228, 45%, 44%);
+}
