@@ -1,0 +1,53 @@
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #d6e2f0;
+}
+
+@media (min-width: 1281px) {
+.centerDiv {
+  width: 30%;
+  background-color: white;
+  height: 50%;
+  position: absolute;
+  top: 25vh;
+  border-radius: 15px;
+  text-align: center;
+  display: inline-table;
+}
+}
+@media (min-width: 360px) {
+.centerDiv {
+  width: 90%;
+  background-color: white;
+  height: 50%;
+  position: absolute;
+  top: 25vh;
+  border-radius: 15px;
+  text-align: center;
+  display: inline-table;
+}
+}
+
+#qr {
+  background-image: url("images/image-qr-code.png");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: auto;
+  border-radius: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(218, 44%, 22%);
+}
