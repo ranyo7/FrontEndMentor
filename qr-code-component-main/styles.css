@@ -6,42 +6,41 @@ body {
   display: flex;
   justify-content: center;
   background-color: #d6e2f0;
+
 }
 
-@media (min-width: 1281px) {
+h3 {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 13px;
+  color: hsl(220, 15%, 55%);
+}
+
+
 .centerDiv {
-  width: 30%;
+  width: 260px;
   background-color: white;
-  height: 50%;
+  height: 40%;
   position: absolute;
   top: 25vh;
   border-radius: 15px;
   text-align: center;
   display: inline-table;
 }
-}
-@media (min-width: 360px) {
-.centerDiv {
-  width: 90%;
-  background-color: white;
-  height: 50%;
-  position: absolute;
-  top: 25vh;
-  border-radius: 15px;
-  text-align: center;
-  display: inline-table;
-}
+
+.textDiv {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #qr {
-  background-image: url("images/image-qr-code.png");
-  background-color: black;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: auto;
+  margin-top: 15px;
   border-radius: 15px;
+  height: 230px;
 }
 
 .attribution {
