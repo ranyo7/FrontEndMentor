@@ -46,6 +46,8 @@ p {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 30px;
 }
 .attribution a {
   color: hsl(218, 44%, 22%);
