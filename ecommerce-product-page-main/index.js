@@ -1,4 +1,4 @@
-var orderAmount = 0;
+var orderAmount = 1;
 
 $(document).ready(function() {
 
@@ -30,6 +30,6 @@ $(document).ready(function() {
 });
 
 function updateOrderAmount(){
-  orderAmount = Math.min(Math.max(orderAmount, 0), 10);
+  orderAmount = Math.min(Math.max(orderAmount, 1), 10);
   $("#orderAmount").text(orderAmount);
 }
