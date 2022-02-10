@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+
   <div class="mainFrame">
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -63,31 +65,31 @@
           <hr class="solid">
 
           <div class="container">
-            <div class="cartItem gridCol">
+            <div class="cartItem invisible">
               <img class="cartThumbnail col1" src="./images/image-product-1-thumbnail.jpg" alt="">
               <div class="gridCol col2">
-                <div class="ml-3 gridRow col1">
+                <div class="ml-2 gridRow col1">
                   <p class="row1 mb-0">Fall Limited Edition Sneakers</p>
                   <span class="gridCol row2">
-                    <p class="float col1">$125.00 x 3</p>
-                    <h5 class="col2">$375</h5>
+                    <p id="cartAmount" class="float col1">$125.00 x 3</p>
+                    <h5 id="cartTotal" class="col2">$375</h5>
                   </span>
                 </div>
-                <img class="col2 trashcan" src="./images/icon-cart.svg" alt="Remove from cart">
+                <img class="col2 trashcan" src="./images/icon-delete.svg" alt="Remove from cart">
               </div>
-
 
             </div>
 
-            <button class="checkout" type="button" name="Checkout">Checkout</button>
+            <button class="checkout invisible" type="button" name="Checkout">Checkout</button>
+
+            <h5 class="centerGray">Your cart is empty.</h5>
           </div>
 
-          <h5 class="centerGray">Your cart is empty.</h5>
         </div>
       </a>
 
       <a>
-        <img class="avatar" src="./images/image-avatar.png" alt="Avatar">
+        <img class="avatar mr-auto" src="./images/image-avatar.png" alt="Avatar">
       </a>
 
     </nav>
@@ -100,23 +102,12 @@
           <img id="displayImage" class="productImage"src="./images/image-product-1.jpg" alt="">
           <div class="iJTQUOhcWr7x9JvoRxT2MZw1T">
             <div class="container">
-              <div class="row mt-4">
+              <div class="mt-4">
 
-                <div class="col">
-                  <img class="thumbnail"src="./images/image-product-1-thumbnail.jpg" alt="">
-                </div>
-
-                <div class="col">
-                  <img class="thumbnail"src="./images/image-product-2-thumbnail.jpg" alt="">
-                </div>
-
-                <div class="col">
-                  <img class="thumbnail"src="./images/image-product-3-thumbnail.jpg" alt="">
-                </div>
-
-                <div class="col">
-                  <img class="thumbnail"src="./images/image-product-4-thumbnail.jpg" alt="">
-                </div>
+                <img class="thumbnail col thumbnailSelected"src="./images/image-product-1-thumbnail.jpg" alt="">
+                <img class="thumbnail col ml-2"src="./images/image-product-2-thumbnail.jpg" alt="">
+                <img class="thumbnail col ml-2"src="./images/image-product-3-thumbnail.jpg" alt="">
+                <img class="thumbnail col ml-2"src="./images/image-product-4-thumbnail.jpg" alt="">
 
               </div>
             </div>
@@ -150,8 +141,8 @@
               </div>
 
 
-              <button type="button" class="purchaseButton">
-                <img class="pr-2" src="./images/icon-cart.svg" alt="" >
+              <button type="button" class="addToCart">
+                <img class="pr-2 addToCartIcon" src="./images/icon-cart.svg" alt="" >
                 Add to cart
               </button>
             </div>
@@ -163,6 +154,28 @@
       </div>
 
 
+    </div>
+
+    <div id="overlay">
+      <div>
+        <img src="./images/icon-close.svg" id="closeOverlay" class="centerImg" alt="">
+
+        <img id="overlayImg" class="centerImg" src="./images/image-product-1.jpg" alt="">
+
+        <img src="./images/icon-next.svg" class="centerImg left arrow" alt="">
+        <img src="./images/icon-next.svg" class="centerImg right arrow" alt="">
+
+        <div class="imgContainer">
+          <div class="mt--">
+
+            <img class="oThumbnail col "src="./images/image-product-1-thumbnail.jpg" alt="">
+            <img class="oThumbnail col ml-3"src="./images/image-product-2-thumbnail.jpg" alt="">
+            <img class="oThumbnail col ml-3"src="./images/image-product-3-thumbnail.jpg" alt="">
+            <img class="oThumbnail col ml-3"src="./images/image-product-4-thumbnail.jpg" alt="">
+
+          </div>
+        </div>
+      </div>
     </div>
 
 
