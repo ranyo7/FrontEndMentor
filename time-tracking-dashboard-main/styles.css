@@ -1,3 +1,47 @@
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+h2 {
+
+}
+h3 {
+  font-size: 18px;
+}
+.container {
+  color: white;
+}
+.blueBack{
+  background-color: hsl(235, 46%, 20%);
+  flex-basis: 250px;
+}
+.blueBack p {
+  color: hsl(235, 45%, 61%);
+}
+.lightBlueBack{
+  background-color: hsl(235, 45%, 61%);
+}
+.curveBorder {
+  border-radius: 10px;
+}
+.textPad {
+  padding: 10px 15px;
+}
+.vertPad {
+  padding: 30px 0 0 0;
+}
+
+.showWeek:hover, .showDay:hover, .showMonth:hover {
+  color: white;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

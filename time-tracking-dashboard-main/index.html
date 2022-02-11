@@ -11,108 +11,128 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
 </head>
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm">
-        Report for
-        Jeremy Robson
-        Daily
-        Weekly
-        Monthly
-      </div>
-      <div class="col-md">
-        <div class="row">
-          <div class="col-sm">
-            Work
-            5hrs <!-- daily -->
-            Previous - 7hrs <!-- daily -->
-            32hrs <!-- weekly -->
-            Previous - 36hrs <!-- weekly -->
-            103hrs <!-- monthly -->
-            Previous - 128hrs <!-- monthly -->
-          </div>
-          <div class="col-sm">
-            Play
-            1hr <!-- daily -->
-            Previous - 2hrs <!-- daily -->
-            10hrs <!-- weekly -->
-            Previous - 8hrs <!-- weekly -->
-            23hrs <!-- monthly -->
-            Previous - 29hrs <!-- monthly -->
-          </div>
-          <div class="col-sm">
-            Study
-            0hrs <!-- daily -->
-            Previous - 1hr <!-- daily -->
-            4hrs <!-- weekly -->
-            Previous - 7hrs <!-- weekly -->
-            13hrs <!-- monthly -->
-            Previous - 19hrs <!-- monthly -->
-          </div>
+
+      <div class="col-lg-4 blueBack curveBorder">
+        <div class="lightBlueBack textPad curveBorder">
+          <img src="" alt="">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
         </div>
+        <div class="textPad">
+          <p class="showDay cursor">Daily</p>
+          <p class="showWeek cursor">Weekly</p>
+          <p class="showMonth cursor">Monthly</p>
+        </div>
+      </div>
+
+      <div class="col-lg">
+
         <div class="row">
-          <div class="col-sm">
-            Exercise
-            1hr <!-- daily -->
-            Previous - 1hr <!-- daily -->
-            4hrs <!-- weekly -->
-            Previous - 5hrs <!-- weekly -->
-            11hrs <!-- monthly -->
-            Previous - 18hrs <!-- monthly -->
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(15, 100%, 70%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Work</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">5hrs</h2>
+              <p class="daily">Yesterday - 7hrs</p>
+              <h2 class="weekly">32hrs</h2>
+              <p class="weekly">Last Week - 36hrs</p>
+              <h2 class="monthly">103hrs</h2>
+              <p class="monthly">Last Month - 128hrs</p>
+            </div>
           </div>
-          <div class="col-sm">
-            Social
-            1hr <!-- daily -->
-            Previous - 3hrs <!-- daily -->
-            5hrs <!-- weekly -->
-            Previous - 10hrs <!-- weekly -->
-            21hrs <!-- monthly -->
-            Previous - 23hrs <!-- monthly -->
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(195, 74%, 62%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Play</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">1hrs</h2>
+              <p class="daily">Yesterday - 2hrs</p>
+              <h2 class="weekly">10hrs</h2>
+              <p class="weekly">Last Week - 8hrs</p>
+              <h2 class="monthly">23hrs</h2>
+              <p class="monthly">Last Month - 29hrs</p>
+            </div>
           </div>
-          <div class="col-sm">
-            Self Care
-            0hrs <!-- daily -->
-            Previous - 1hr <!-- daily -->
-            2hrs <!-- weekly -->
-            Previous - 2hrs <!-- weekly -->
-            7hrs <!-- monthly -->
-            Previous - 11hrs <!-- monthly -->
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(348, 100%, 68%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Study</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">0hrs</h2>
+              <p class="daily">Yesterday - 1hrs</p>
+              <h2 class="weekly">4hrs</h2>
+              <p class="weekly">Last Week - 7hrs</p>
+              <h2 class="monthly">13hrs</h2>
+              <p class="monthly">Last Month - 19hrs</p>
+            </div>
           </div>
+
+        </div>
+
+        <div class="row mt-3">
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(145, 58%, 55%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Exercise</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">1hrs</h2>
+              <p class="daily">Yesterday - 1hrs</p>
+              <h2 class="weekly">4hrs</h2>
+              <p class="weekly">Last Week - 5hrs</p>
+              <h2 class="monthly">11hrs</h2>
+              <p class="monthly">Last Month - 18hrs</p>
+            </div>
+          </div>
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(264, 64%, 52%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Social</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">3hrs</h2>
+              <p class="daily">Yesterday - 3hrs</p>
+              <h2 class="weekly">5hrs</h2>
+              <p class="weekly">Last Week - 10hrs</p>
+              <h2 class="monthly">21hrs</h2>
+              <p class="monthly">Last Month - 23hrs</p>
+            </div>
+          </div>
+
+          <div class="curveBorder col-lg-4 vertPad" style="background-color:hsl(43, 84%, 65%)">
+            <div class="blueBack textPad curveBorder">
+              <h3>Self Care</h3>
+              <img src="./images/icon-ellipsis.svg" class="cursor" alt="">
+              <h2 class="daily">0hrs</h2>
+              <p class="daily">Yesterday - 1hrs</p>
+              <h2 class="weekly">2hrs</h2>
+              <p class="weekly">Last Week - 2hrs</p>
+              <h2 class="monthly">7hrs</h2>
+              <p class="monthly">Last Month - 1hrs</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Timothy Kidwell</a>.
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./index.js" type="text/javascript">
+
+  </script>
 </body>
 </html>
