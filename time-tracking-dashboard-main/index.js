@@ -3,33 +3,22 @@ $(document).ready(function(){
   displayDay();
 
   $(".showDay").click(function(){
-    colorDateText();
-    $(this).css("color","white");
     displayDay();
   });
   $(".showWeek").click(function(){
-    colorDateText();
-    $(this).css("color","white");
     displayWeek();
   });
   $(".showMonth").click(function(){
-    colorDateText();
-    $(this).css("color","white");
     displayMonth();
   });
 });
 
-function colorDateText(){
-  $(".showDay").css("color","hsl(235, 45%, 61%)");
-  $(".showWeek").css("color","hsl(235, 45%, 61%)");
-  $(".showMonth").css("color","hsl(235, 45%, 61%)");
-}
 function displayDay(){
   $(".daily").each(function(){
     $(this).show();
   });
   colorDateText();
-  $(".showDay").css("color","white");
+  $(".showDay").addClass("selected");
   hideWeek();
   hideMonth();
 }
@@ -38,7 +27,7 @@ function displayWeek(){
     $(this).show();
   });
   colorDateText();
-  $(".showWeek").css("color","white");
+  $(".showWeek").addClass("selected");
   hideDay();
   hideMonth();
 }
@@ -47,10 +36,17 @@ function displayMonth(){
     $(this).show();
   });
   colorDateText();
-  $(".showMonth").css("color","white");
+  $(".showMonth").addClass("selected");
   hideDay();
   hideWeek();
 }
+
+function colorDateText(){
+  $(".showDay").removeClass("selected");
+  $(".showWeek").removeClass("selected");
+  $(".showMonth").removeClass("selected");
+}
+
 function hideDay(){
   $(".daily").each(function() {
     $(this).hide();
