@@ -5,32 +5,51 @@ h1 {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
+@media only screen and (max-width: 500px){
+  h1 {
+    font-size: 1.5rem;
+  }
+}
 h2 {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   font-size: 3em;
+  margin-bottom: 0;
 }
 h3 {
   font-size: 18px;
+  padding-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+@media only screen and (max-width: 500px){
+  h3 {
+    padding-top: 1.5rem;
+    margin-bottom: -1rem;
+  }
+}
+p{
+  padding-bottom: 1rem;
+}
+img {
+
 }
 .container {
   color: white;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
-.blueBack{
-  background-color: #1d204b;
-  flex-basis: 250px;
-  height: 100%;
+@media only screen and (max-width:500px){
+  .container {
+    top: 0%;
+    transform: translate(-50%, 0%);
+  }
 }
 .hover:hover{
   background-color: #34397b;
 }
-.blueBack p {
-  color: white;
-  opacity: 70%;
-}
-.lightBlueBack{
-  background-color: #5746ea;
-}
+
 .curveBorder {
   border-radius: 10px;
 }
@@ -38,10 +57,10 @@ h3 {
   border-radius: 12px;
 }
 .textPad {
-  padding: 0px 24px;
+  padding: 0 24px;
 }
 .vertPad {
-  padding: 30px 0 0 0;
+  padding: 40px 0 0 0;
 }
 .noPad {
   padding: 0;
@@ -49,11 +68,51 @@ h3 {
 .inlineBlock {
   display: inline-block;
 }
+@media only screen and (max-width: 500px){
+  .float {
+    float: right;
+    margin-top: 25px;
+  }
+}
 
-.ellipsis {
-  position: absolute;
-  top:4em;
-  right:2em;
+.time {
+  padding-bottom: 0;
+}
+
+
+@media only screen and (min-width: 500px){
+  .flexWidth {
+    flex-basis:250px;
+  }
+}
+
+.mainHeight {
+  height: 455px;
+}
+@media only screen and (max-width: 500px){
+  .mainHeight {
+    margin-left: 15px;
+    margin-right: 15px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 500px){
+  .ellipsis {
+    position: relative;
+    top: -3em;
+    right: -9em;
+  }
+}
+@media only screen and (max-width: 500px){
+  .ellipsis {
+    position: relative;
+    top: -0.5em;
+    right: -18em;
+  }
+}
+.ellipsis:hover {
+  filter: brightness(1.4);
 }
 
 .avatar {
@@ -79,6 +138,23 @@ h3 {
   background-repeat: no-repeat;
   background-position: top 0 right 1em;
   background-size:60px;
+}
+.blueBack{
+  background-color: #1d204b;
+
+}
+@media only screen and (min-width:500px){
+  .blueBack{
+    flex-basis: 250px;
+    height: 100%;
+  }
+}
+
+.blueBack p {
+  color: #5f6599;
+}
+.lightBlueBack{
+  background-color: #5746ea;
 }
 .orangeBack {
   background-color: hsl(15, 100%, 70%);
@@ -109,6 +185,9 @@ h3 {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 40%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
