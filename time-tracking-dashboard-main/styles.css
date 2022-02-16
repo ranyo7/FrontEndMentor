@@ -37,7 +37,7 @@ img {
   color: white;
   position: absolute;
   top: 50%;
-  left:50%;
+  left:54%;
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width:500px){
@@ -101,7 +101,7 @@ img {
 @media only screen and (min-width: 500px){
   .ellipsis {
     position: relative;
-    top: -3em;
+    top: -1.5em;
     right: -9em;
   }
 }
@@ -197,7 +197,7 @@ img {
   text-align: center;
   position: fixed;
   top: 0;
-  left: 40%;
+  left: 43%;
   color: hsl(236, 100%, 87%);
 }
 @media only screen and (max-width:500px){

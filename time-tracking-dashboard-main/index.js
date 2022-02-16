@@ -1,6 +1,6 @@
 $(document).ready(function(){
   console.log("JS start");
-  displayDay();
+  displayWeek();
 
   $(".showDay").click(function(){
     displayDay();
