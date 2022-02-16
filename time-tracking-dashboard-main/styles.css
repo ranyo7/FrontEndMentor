@@ -78,7 +78,11 @@ img {
 .time {
   padding-bottom: 0;
 }
-
+@media only screen and (max-width: 500px){
+  .timeShow {
+    flex-wrap: nowrap;
+  }
+}
 
 @media only screen and (min-width: 500px){
   .flexWidth {
@@ -86,9 +90,6 @@ img {
   }
 }
 
-.mainHeight {
-  height: 455px;
-}
 @media only screen and (max-width: 500px){
   .mainHeight {
     margin-left: 15px;
@@ -120,6 +121,15 @@ img {
   border-color: white;
   border-radius: 50px;
   border: solid;
+}
+
+@media only screen and (max-width:500px){
+  .showWeek{
+    margin-left: 40px;
+  }
+  .showMonth{
+    margin-left: 50px;
+  }
 }
 
 .showWeek:hover, .showDay:hover, .showMonth:hover {
@@ -186,9 +196,15 @@ img {
   font-size: 11px;
   text-align: center;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 40%;
+  color: hsl(236, 100%, 87%);
+}
+@media only screen and (max-width:500px){
+  .attribution{
+    left: 10%;
+  }
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: white;
 }
