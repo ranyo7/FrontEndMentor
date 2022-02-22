@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+}
+@media only screen and (min-width:500px){
+  body {
+    margin: 0 18%;
+  }
+}
+p {
+  margin-block-end: 0!important;
+}
+h5 {
+  font-weight: bold;
+}
+
+.dark-mode {
+  background-color: #202d36;
+  color: white;
+}
+.dark-mode-light {
+  background-color: #2b3743!important;
+  color: white!important;
+  border-color: #2b3743!important;
+}
+
+.searchBar {
+  max-width: 600px;
+}
+/* Style the search field */
+form.searchBar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid white;
+  float: left;
+  width: 80%;
+  background: white;
+}
+/* Style the submit button */
+form.searchBar button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  color: grey;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid white;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+form.searchBar button:hover {
+  background: #0b7dda;
+}
+/* Clear floats */
+form.searchBar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card {
+  width:16em;
+  margin-bottom: 3em;
+  margin-left: 3em;
+}
+.card-img-top {
+  height: 140px;
+}
