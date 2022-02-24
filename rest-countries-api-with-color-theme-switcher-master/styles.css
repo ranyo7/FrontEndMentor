@@ -11,6 +11,9 @@ h5 {
   font-weight: bold;
 }
 
+.darkImg {
+  width: 16px;
+}
 .dark-mode {
   background-color: #202d36;
   color: white;
@@ -22,6 +25,9 @@ h5 {
 }
 .dark-mode-button:hover {
   cursor: pointer;
+}
+.dark-mode-image {
+  filter: invert(1);
 }
 
 @media only screen and (min-width: 500px){
@@ -87,9 +93,19 @@ form.searchBar::after {
   height: 140px;
 }
 
-/* //////////CountryIndex CSS/////////////// */
-@media only screen and (min-width: 500px){
-  .indexImg {
-    width: 40%;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 43%;
+  color: black;
+}
+@media only screen and (max-width:500px){
+  .attribution{
+    left: 10%;
   }
+}
+.attribution a {
+  color: black;
 }

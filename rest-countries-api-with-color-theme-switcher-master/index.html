@@ -15,14 +15,17 @@
 
   <body class>
 
-    <nav class="navbar navbar-light bg-white mb-3 DML">
+    <nav class="navbar fixed-top bg-white mb-3 DML">
       <div class="container-fluid margins">
         <a class="navbar-brand mb-0 h1 DML" href="./index.html">Where in the world?</a>
-        <span onclick="darkModeToggle()" class="dark-mode-button">Dark Mode</span>
+        <span onclick="darkModeToggle()" class="dark-mode-button">
+          <img src="./sleep-mode.png" class="darkImg imgDML" alt="">
+          Dark Mode
+        </span>
       </div>
     </nav>
 
-    <nav class="navbar margins">
+    <nav class="navbar margins mt-5">
       <div class="container-fluid mb-3">
         <form class="searchBar" >
           <button type="button" class="DML" onclick="searchByName()"><i class="fa fa-search"></i></button>
@@ -47,6 +50,11 @@
 
     <div id="display" class="row gx-3 margins">
 
+    </div>
+
+    <div class="attribution DML">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="DML">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/ranyo7" class="DML">Timothy Kidwell</a>.
     </div>
 
 

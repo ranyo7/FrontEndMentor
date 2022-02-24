@@ -1,5 +1,7 @@
+var parameter = location.search.substring(1) || false;
+var darkmode = (parameter == "true" ? true : false);
 getAJAX('all');
-var darkmode = false;
+initDarkMode();
 
 function getAJAX(input){
   console.log("Loaded getAJAX()");
@@ -22,7 +24,7 @@ function createTable(data){
     for (let i=0; i<dataSet.length; i++){
       table +=
       "<div class='card mx-auto DML'>" +
-        `<a href="./CountryIndex.html?${dataSet[i].name.common}"><img src="${dataSet[i].flags.png}" class="card-img-top" alt="..."></a>` +
+        `<a class="flag" href="./CountryIndex.html?${dataSet[i].name.common}"><img src="${dataSet[i].flags.png}" class="card-img-top" alt="..."></a>` +
         "<div class='card-body'>" +
           "<div class=''>" +
             `<h5 class=''>${dataSet[i].name.common}</h6>` +
@@ -34,7 +36,7 @@ function createTable(data){
       "</div>";
     }
     $("#display").html(table);
-
+    initButtons();
     if(darkmode){
       $("#display .DML").addClass("dark-mode-light");
     }
@@ -43,10 +45,28 @@ function createTable(data){
   }
 }
 
+function initButtons(data){
+  $(".flag").on("click", function(event) {
+    $(this).attr("href", $(this).attr('href') + "&" + darkmode);
+  });
+  $(".navbar-brand").on("click", function(event) {
+    $(this).attr("href", $(this).attr('href') + "?" + darkmode);
+  });
+}
+
+function initDarkMode() {
+  if(darkmode){
+    $("body").toggleClass("dark-mode");
+    $(".DML").toggleClass("dark-mode-light");
+    $(".imgDML").toggleClass("dark-mode-image");
+  }
+}
+
 function darkModeToggle(){
   darkmode = !darkmode;
   $("body").toggleClass("dark-mode");
   $(".DML").toggleClass("dark-mode-light");
+  $(".imgDML").toggleClass("dark-mode-image");
 }
 
 function searchByName(){
