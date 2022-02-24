@@ -22,7 +22,7 @@ function createTable(data){
     for (let i=0; i<dataSet.length; i++){
       table +=
       "<div class='card mx-auto DML'>" +
-        `<img src="${dataSet[i].flags.png}" class="card-img-top" alt="...">` +
+        `<a href="./CountryIndex.html?${dataSet[i].name.common}"><img src="${dataSet[i].flags.png}" class="card-img-top" alt="..."></a>` +
         "<div class='card-body'>" +
           "<div class=''>" +
             `<h5 class=''>${dataSet[i].name.common}</h6>` +

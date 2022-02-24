@@ -1,0 +1,69 @@
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+@media only screen and (min-width: 500px){
+  .margins {
+    margin: 0 18%
+  }
+}
+
+.dark-mode {
+  background-color: #202d36;
+  color: white;
+}
+.dark-mode-light {
+  background-color: #2b3743!important;
+  color: white!important;
+  border-color: #2b3743!important;
+}
+.dark-mode-button:hover {
+  cursor: pointer;
+}
+.dark-mode-image {
+  filter: invert(1);
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 1px black;
+}
+
+
+.btn {
+  margin-right: 1em;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.backBtn {
+  margin-left: 32px;
+  width: 120px;
+}
+.flipx {
+  transform: scaleX(-1);
+}
+.scale {
+  width: 16px;
+}
+
+@media only screen and (min-width: 500px){
+  .indexImg {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .indexImg {
+    height: 200px;
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width: 500px){
+  .ml {
+    margin-left: 32px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .mt {
+    margin-top: 16px;
+  }
+}
