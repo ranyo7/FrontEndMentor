@@ -1,7 +1,7 @@
 var parameters = location.search.substring(1).split("&");
 darkmode = (parameters[1] == "true" ? true : false);
 getAJAX();
-initHomeButtons();
+initButtons();
 initDarkMode();
 
 function getAJAX(){
@@ -32,7 +32,7 @@ function fillInDetails(data){
   }
 }
 
-function initHomeButtons(){
+function initButtons(){
   $(".navbar-brand").on("click", function(event) {
     $(this).attr("href", $(this).attr('href') + "?" + darkmode);
   });
@@ -111,6 +111,10 @@ function generateButtons(dataSet){
   }
 
   $(".countryButtons").html(countryList);
+
+  $(".border").on("click", function(event) {
+    $(this).attr("href", $(this).attr('href') + "&" + darkmode);
+  });
 
   if(darkmode){
     console.log($("a.border"));
