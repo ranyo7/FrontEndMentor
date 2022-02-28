@@ -89,6 +89,10 @@ input, button, textarea, select {
   gap: var(--gap, 1rem);
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -146,9 +150,70 @@ input, button, textarea, select {
 }
 
 .numbered-title {
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-500);
   text-transform: uppercase;
-  letter-spacing: 2.7px;
+  letter-spacing: 4.72px;
 }
-.numbered-title span {
-  color: hsl(var(--clear-dark) / .5);
+.numbered-title > span {
+  margin-right: 0.5em;
+  font-weight: 700;
+  color: hsl(var(--clr-white) / .25);
+}
+
+/* ------------------- */
+/* Components:         */
+/* ------------------- */
+
+.large-button {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  margin-top: 2em;
+  padding: 0 2em;
+  aspect-ratio: 1; /* creates a square rather than width/height*/
+  text-decoration: none;
+  border-radius: 50%;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-600);
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+}
+.large-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: hsl(var(--clr-white) / .15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+.large-button:hover::after,
+.large-button:focus::after {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  list-style: none;
+  padding 0;
+  margin: 0;
+}
+.primary-navigation a {
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+}
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > *{
+
 }
