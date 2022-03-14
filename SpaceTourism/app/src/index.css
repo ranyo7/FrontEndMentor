@@ -9,11 +9,11 @@
 
   /* font sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -28,6 +28,7 @@
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -37,6 +38,7 @@
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
   }
 }
@@ -118,42 +120,14 @@ input, button, textarea, select {
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
+.flow--sm {
+  --flow-space: .5rem;
+}
 
 .container {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
-}
-
-.grid-container {
-  text-align: center;
-  /* border: 5px solid limegreen; */
-  display: grid;
-  place-items: center;
-  padding-inline: 1rem;
-  margin-bottom: 7rem;
-}
-@media (min-width: 45em) {
-    .grid-container {
-      text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    }
-    .grid-container > *:first-child {
-        grid-column: 2;
-        /* outline: 1px solid red; */
-    }
-    .grid-container > *:last-child {
-        grid-column: 3;
-        /* outline: 1px solid yellow; */
-    }
-    .home .grid-container {
-      padding-bottom: 6rem;
-      align-items: end;
-    }
-}
-.grid-container * {
-  max-width: 50ch;
 }
 
 /* used for assistive technologies like programs that read off a screen to the user */
@@ -212,7 +186,7 @@ input, button, textarea, select {
   text-transform: uppercase;
   letter-spacing: 4.72px;
 }
-.numbered-title > span {
+.numbered-title  span {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-white) / .25);
@@ -384,7 +358,7 @@ input, button, textarea, select {
 }
 
 .underline-indicators > *{
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: .2rem solid hsl(var(--clr-white)/0);
   cursor: pointer;
@@ -406,7 +380,7 @@ input, button, textarea, select {
   text-transform: uppercase;
   font-family: var(--sans-cond);
   color: hsl(var(--clr-light));
-  background-color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-dark) / 0);
   letter-spacing: 2.7px;
 }
 
@@ -471,4 +445,184 @@ body {
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-position: right center;
   }
+}
+
+.destination {
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
+}
+@media (min-width: 35rem){
+  .destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+}
+@media (min-width: 45rem){
+  .destination {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    background-position: right center;
+  }
+}
+
+.crew {
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
+}
+@media (min-width: 35rem){
+  .crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+}
+@media (min-width: 45rem){
+  .crew {
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+    background-position: right center;
+  }
+}
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+.grid-container {
+  text-align: center;
+  /* border: 5px solid limegreen; */
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  margin-bottom: 7rem;
+}
+@media (min-width: 45em) {
+    .grid-container {
+      text-align: left;
+      column-gap: var(--container-gap, 2rem);
+      grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    }
+
+    .home .grid-container {
+      padding-bottom: 6rem;
+      align-items: end;
+    }
+    .home .grid-container > *:first-child {
+        grid-column: 2;
+        /* outline: 1px solid red; */
+    }
+    .home .grid-container > *:last-child {
+        grid-column: 3;
+        /* outline: 1px solid yellow; */
+    }
+}
+.grid-container p:not([class]) { /*any p without a class*/
+  max-width: 50ch;
+}
+
+.numbered-title {
+  grid-area: title;
+}
+@media (min-width: 35em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+}
+
+/* destination layout */
+
+.destination .grid-container {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+.destination .grid-container > picture {
+  grid-area: image;
+  max-width: 60%;
+}
+.destination .grid-container > .tab-list {
+  grid-area: tabs;
+}
+.destination .grid-container > .destination-info {
+  grid-area: content;
+}
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--clr-white)/.1);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+.destination-meta p {
+  font-size: 1.75rem;
+}
+@media (min-width: 35em){
+
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 45em) {
+  .destination .grid-container {
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+        '. title title .'
+        '. image tabs .'
+        '. image content .';
+  }
+  .destination .grid-container > picture {
+    grid-area: image;
+    max-width: 90%;
+  }
+  .destination-meta {
+    justify-content: start;
+    --gap: min(6vw, 6rem);
+  }
+}
+
+/* Crew layout */
+.crew .grid-container > picture{
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white)/.1);
+}
+.crew .grid-container > .dot-indicators {
+  grid-area: dots;
+}
+.crew .grid-container > .crew-info {
+  grid-area: content;
+}
+.crew .grid-container {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'dots'
+    'content';
+}
+@media (min-width: 35em) {
+  .crew .grid-container {
+    margin-bottom: 0;
+    grid-template-areas:
+      'title'
+      'content'
+      'dots'
+      'image';
+  }
+}
+@media (min-width: 45em) {
+  .crew .grid-container {
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+        '. title image .'
+        '. content image .'
+        '. dots image .';
+  }
+  .crew .grid-container > picture {
+    grid-area: image;
+    max-width: 90%;
+    justify-self: end;
+    align-self: end;
+  }
+}
+.crew-info h2 {
+  color: hsl(var(--clr-white) / .5);
 }
