@@ -339,7 +339,7 @@ input, button, textarea, select {
     display: block;
     position: absolute;
     z-index: 2000;
-    right: 4rem;
+    right: 3.5rem;
     top: 2rem;
     background: transparent;
     background-image: url(../assets/shared/icon-hamburger.svg);
@@ -449,31 +449,34 @@ body {
 
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
+  background-position: top;
 }
 @media (min-width: 35rem){
   .destination {
     background-image: url(../assets/destination/background-destination-tablet.jpg);
+
   }
 }
 @media (min-width: 45rem){
   .destination {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
-    background-position: right center;
+
   }
 }
 
 .crew {
   background-image: url(../assets/crew/background-crew-mobile.jpg);
+  background-position: top;
 }
 @media (min-width: 35rem){
   .crew {
     background-image: url(../assets/crew/background-crew-tablet.jpg);
+
   }
 }
 @media (min-width: 45rem){
   .crew {
     background-image: url(../assets/crew/background-crew-desktop.jpg);
-    background-position: right center;
   }
 }
 
@@ -483,12 +486,13 @@ body {
 @media (min-width: 35rem){
   .technology {
     background-image: url(../assets/technology/background-technology-tablet.jpg);
+    background-position: center center;
   }
 }
 @media (min-width: 45rem){
   .technology {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
-    background-position: right center;
+
   }
 }
 
@@ -550,9 +554,11 @@ body {
 .destination .grid-container > picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 .destination .grid-container > .tab-list {
   grid-area: tabs;
+  align-self: start;
 }
 .destination .grid-container > .destination-info {
   grid-area: content;
@@ -627,14 +633,14 @@ body {
     justify-items: start;
     align-content: start;
     grid-template-areas:
-        '. title image .'
-        '. content image .'
-        '. dots image .';
+        '. title image image'
+        '. content image image'
+        '. dots image image';
   }
   .crew .grid-container > picture {
     grid-area: image;
     max-width: 90%;
-    justify-self: end;
+    justify-self: start;
     align-self: end;
   }
 }
@@ -654,18 +660,16 @@ body {
 }
 .technology .grid-container > .technology-info {
   grid-area: content;
+  padding-inline: 2rem;
 }
 .technology .grid-container {
   --flow-space: 2rem;
+  padding-inline: 0;
   grid-template-areas:
     'title'
     'image'
     'numbers'
     'content';
-}
-@media (min-width: 35em) {
-  .technology .grid-container > picture{
-    max-width: 100%;
 }
 @media (min-width: 45em) {
   .technology .grid-container {
@@ -685,5 +689,8 @@ body {
     grid-area: numbers;
     display: grid;
     justify-self: end;
+  }
+  .technology .grid-container > .technology-info {
+    padding-inline: 0;
   }
 }
