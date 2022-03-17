@@ -427,13 +427,14 @@ input, button, textarea, select {
 /* Page Specific backgrounds */
 /* ------------------- */
 
-body {
-  background-position: bottom center;
-  background-size: cover;
+.background {
+  background-position: top center;
+  min-height: 100vh;
 }
 
 .home {
   background-image: url(../public/assets/home/background-home-mobile.jpg);
+  background-size: cover;
 }
 @media (min-width: 35rem){
   .home {
@@ -450,6 +451,7 @@ body {
 .destination {
   background-image: url(../public/assets/destination/background-destination-mobile.jpg);
   background-position: top;
+  background-size: cover;
 }
 @media (min-width: 35rem){
   .destination {
@@ -467,6 +469,7 @@ body {
 .crew {
   background-image: url(../public/assets/crew/background-crew-mobile.jpg);
   background-position: top;
+  background-size: cover;
 }
 @media (min-width: 35rem){
   .crew {
@@ -482,6 +485,7 @@ body {
 
 .technology {
   background-image: url(../public/assets/technology/background-technology-mobile.jpg);
+  background-size: cover;
 }
 @media (min-width: 35rem){
   .technology {
@@ -506,6 +510,11 @@ body {
   place-items: center;
   padding-inline: 1rem;
   margin-bottom: 7rem;
+}
+@media (min-width: 35em){
+  .grid-container{
+    min-height: 70vh;
+  }
 }
 @media (min-width: 45em) {
     .grid-container {
